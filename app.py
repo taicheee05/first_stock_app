@@ -79,7 +79,7 @@ else:
    .mark_line(opacity=0.8)
    .encode(
        x="Date:T",
-       y=alt.Y("Stock Price(USD):Q",stack=None,scale=alt.Scale(domain=[0,1000])),
+       y=alt.Y("Stock Price(USD):Q",stack=None,scale=alt.Scale(domain=[0,3000])),
        color="Name:N"
        )   
     )
