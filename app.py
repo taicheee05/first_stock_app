@@ -74,13 +74,3 @@ else:
     data = data.T.reset_index()
     data = pd.melt(data,id_vars=['Date']).rename(columns={'value':'Stock Price(USD)'})
     data=data.head(400)
-    chart=(
-        alt.Chart(data)
-       .mark_line(opacity=0.8)
-       .encode(
-           x="Date:T",
-           y=alt.Y("Stock Price(USD):Q",stack=None,scale=alt.Scale(domain=[250,300])),
-           color="Name:N"
-           )   
-        )
-    st.altair_chart(chart,use_container_width=True)
